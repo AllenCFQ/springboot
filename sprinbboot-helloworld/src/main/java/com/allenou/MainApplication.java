@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.util.Base64Utils;
 
 @SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 public class MainApplication {
@@ -13,5 +14,7 @@ public class MainApplication {
         System.out.println("2");
         SpringApplication.run(MainApplication.class,args);
         System.out.println("3");
+
+        Base64Utils.decodeFromString()
     }
 }
